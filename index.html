@@ -29,7 +29,7 @@
         .container {
             text-align: center;
             background: rgba(255,255,255,0.1);
-            padding: 50px;
+            padding: 60px;
             border-radius: 20px;
             backdrop-filter: blur(15px);
             box-shadow: 0 0 30px rgba(0,0,0,0.3);
@@ -49,41 +49,43 @@
 
         h1 {
             font-size: 40px;
-            margin-bottom: 10px;
         }
 
-        p {
-            color: #ddd;
-            margin-bottom: 30px;
+        /* Typing animation */
+        .typing {
+            font-size: 18px;
+            border-right: 2px solid white;
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 4s steps(30) infinite, blink 0.7s infinite;
         }
 
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 260px }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+
+        /* Button */
         .btn {
             display: inline-block;
-            padding: 12px 25px;
+            margin-top: 30px;
+            padding: 12px 30px;
             border-radius: 30px;
             text-decoration: none;
             color: white;
-            margin: 10px;
             font-weight: bold;
+            background: linear-gradient(45deg, #00f2fe, #4facfe);
             transition: 0.3s;
         }
 
-        .login-btn {
-            background: linear-gradient(45deg, #00f2fe, #4facfe);
-        }
-
-        .login-btn:hover {
+        .btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 15px #00f2fe;
-        }
-
-        .insta-btn {
-            background: linear-gradient(45deg, #f09433, #dc2743);
-        }
-
-        .insta-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px #ff4b92;
+            box-shadow: 0 0 20px #00f2fe;
         }
     </style>
 </head>
@@ -92,16 +94,13 @@
 
 <div class="container">
     <h1>Hi, I'm Kranthi 🚀</h1>
-    <p>AIML Student | Future AI Engineer 🤖</p>
 
-    <!-- Login Button -->
-    <a href="login.html" class="btn login-btn">
-        <i class="fas fa-sign-in-alt"></i> Login
-    </a>
+    <div class="typing">
+        AIML Student | Future AI Engineer 🤖
+    </div>
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/kranthi777_king/" target="_blank" class="btn insta-btn">
-        <i class="fab fa-instagram"></i> Instagram
+    <a href="login.html" class="btn">
+        <i class="fas fa-sign-in-alt"></i> Enter Website
     </a>
 </div>
 
