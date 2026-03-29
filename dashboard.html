@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            background: linear-gradient(270deg, #ff6a00, #ee0979, #00c6ff);
+            background-size: 600% 600%;
+            animation: bgMove 10s ease infinite;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0% }
+            50% { background-position: 100% }
+            100% { background-position: 0% }
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            text-align: center;
+            color: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+            width: 320px;
+        }
+
+        .insta-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366);
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .insta-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #ff4b92;
+        }
+
+        .linkedin-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            border-radius: 30px;
+            background: #0077b5;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .linkedin-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #0077b5;
+        }
+
+        .logout-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: red;
+            color: white;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Welcome Kranthi 🚀</h1>
+    <p>Login Successful</p>
+
+    <a href="https://www.instagram.com/kranthi777_king/" target="_blank" class="insta-btn">
+        <i class="fab fa-instagram"></i> Instagram
+    </a>
+
+    <br>
+
+    <a href="https://in.linkedin.com/in/nakka-kranthi-69008737a" target="_blank" class="linkedin-btn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+
+    <br>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<script>
+if(localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+}
+
+function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
