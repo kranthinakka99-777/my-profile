@@ -1,107 +1,164 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kranthi Website</title>
+    <title>Kranthi | Portfolio</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(270deg, #00c6ff, #0072ff, #6a11cb);
-            background-size: 600% 600%;
-            animation: bgMove 10s ease infinite;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
             color: white;
         }
 
-        @keyframes bgMove {
-            0% { background-position: 0% }
-            50% { background-position: 100% }
-            100% { background-position: 0% }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
         }
 
-        .container {
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00f2fe;
+        }
+
+        .nav-links a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00f2fe;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            background: rgba(255,255,255,0.1);
-            padding: 60px;
-            border-radius: 20px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 0 30px rgba(0,0,0,0.3);
-            animation: fadeIn 1.5s ease;
+            flex-direction: column;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .hero h1 {
+            font-size: 45px;
         }
 
-        h1 {
-            font-size: 40px;
+        .hero span {
+            color: #00f2fe;
         }
 
-        /* Typing animation */
         .typing {
+            margin-top: 10px;
             font-size: 18px;
             border-right: 2px solid white;
-            width: 0;
-            overflow: hidden;
             white-space: nowrap;
-            animation: typing 4s steps(30) infinite, blink 0.7s infinite;
+            overflow: hidden;
+            width: 0;
+            animation: typing 4s steps(30) forwards, blink 0.7s infinite;
         }
 
         @keyframes typing {
             from { width: 0 }
-            to { width: 260px }
+            to { width: 280px }
         }
 
         @keyframes blink {
             50% { border-color: transparent }
         }
 
-        /* Button */
-        .btn {
-            display: inline-block;
+        /* Buttons */
+        .buttons {
             margin-top: 30px;
-            padding: 12px 30px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            margin: 10px;
             border-radius: 30px;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            background: linear-gradient(45deg, #00f2fe, #4facfe);
             transition: 0.3s;
+        }
+
+        .login-btn {
+            background: linear-gradient(45deg, #00f2fe, #4facfe);
+        }
+
+        .social-btn {
+            background: #1e293b;
         }
 
         .btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 20px #00f2fe;
+            box-shadow: 0 0 15px #00f2fe;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            font-size: 14px;
+            color: #aaa;
         }
     </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>Hi, I'm Kranthi 🚀</h1>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">Kranthi.dev</div>
+    <div class="nav-links">
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Hi, I'm <span>Kranthi</span> 🚀</h1>
 
     <div class="typing">
         AIML Student | Future AI Engineer 🤖
     </div>
 
-    <a href="login.html" class="btn">
-        <i class="fas fa-sign-in-alt"></i> Enter Website
-    </a>
+    <div class="buttons">
+        <a href="login.html" class="btn login-btn">
+            <i class="fas fa-sign-in-alt"></i> Enter Dashboard
+        </a>
+
+        <a href="https://www.instagram.com/kranthi777_king/" target="_blank" class="btn social-btn">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://in.linkedin.com/in/nakka-kranthi-69008737a" target="_blank" class="btn social-btn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    © 2026 Kranthi | Built with ❤️
 </div>
 
 </body>
