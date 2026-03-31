@@ -1,165 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kranthi | Portfolio</title>
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kranthi | AIML Developer</title>
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="description" content="Kranthi - AIML Student & Future AI Engineer Portfolio">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background: #0f172a;
-            color: white;
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
         }
 
         /* Navbar */
-        .navbar {
+        nav {
             display: flex;
             justify-content: space-between;
-            padding: 20px 50px;
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(10px);
+            align-items: center;
+            height: 70px;
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #00f2fe;
+            color: var(--primary-color);
         }
 
         .nav-links a {
-            color: white;
             margin-left: 20px;
             text-decoration: none;
-            transition: 0.3s;
+            color: var(--text-light);
         }
 
         .nav-links a:hover {
-            color: #00f2fe;
+            color: var(--primary-color);
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
-            height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            flex-direction: column;
+            padding: 80px 0;
         }
 
         .hero h1 {
-            font-size: 45px;
+            font-size: 40px;
         }
 
         .hero span {
-            color: #00f2fe;
+            color: var(--primary-color);
         }
 
-        .typing {
+        .hero p {
             margin-top: 10px;
-            font-size: 18px;
-            border-right: 2px solid white;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 0;
-            animation: typing 4s steps(30) forwards, blink 0.7s infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 280px }
-        }
-
-        @keyframes blink {
-            50% { border-color: transparent }
-        }
-
-        /* Buttons */
-        .buttons {
-            margin-top: 30px;
+            color: var(--text-light);
         }
 
         .btn {
+            margin-top: 20px;
+            display: inline-block;
             padding: 12px 25px;
-            margin: 10px;
-            border-radius: 30px;
-            text-decoration: none;
+            background: var(--primary-color);
             color: white;
-            font-weight: bold;
-            transition: 0.3s;
+            border-radius: 6px;
+            text-decoration: none;
         }
 
-        .login-btn {
-            background: linear-gradient(45deg, #00f2fe, #4facfe);
+        /* Features */
+        .features {
+            padding: 50px 0;
         }
 
-        .social-btn {
-            background: #1e293b;
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 20px;
         }
 
-        .btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px #00f2fe;
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
         }
 
         /* Footer */
-        .footer {
+        footer {
+            background: #0f172a;
+            color: white;
             text-align: center;
             padding: 20px;
-            background: #020617;
-            font-size: 14px;
-            color: #aaa;
         }
     </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<div class="navbar">
-    <div class="logo">Kranthi.dev</div>
-    <div class="nav-links">
-        <a href="login.html">Login</a>
-    </div>
+<div class="container">
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Kranthi.dev</div>
+        <div class="nav-links">
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Hi, I'm <span>Kranthi</span> 🚀</h1>
+        <p>AIML Student | Future AI Engineer 🤖</p>
+
+        <a href="login.html" class="btn">Enter Dashboard</a>
+
+        <br><br>
+
+        <a href="https://www.instagram.com/kranthi777_king/" target="_blank">Instagram</a> |
+        <a href="https://in.linkedin.com/in/nakka-kranthi-69008737a" target="_blank">LinkedIn</a>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2 style="text-align:center;">My Skills</h2>
+
+        <div class="features-grid">
+            <div class="card">
+                <h3>🤖 AI & ML</h3>
+                <p>Learning Artificial Intelligence & Machine Learning</p>
+            </div>
+
+            <div class="card">
+                <h3>💻 Web Development</h3>
+                <p>Building websites using HTML, CSS, JavaScript</p>
+            </div>
+
+            <div class="card">
+                <h3>⚙️ Projects</h3>
+                <p>Creating automation and smart applications</p>
+            </div>
+        </div>
+    </section>
+
 </div>
 
-<!-- Hero Section -->
-<div class="hero">
-    <h1>Hi, I'm <span>Kranthi</span> 🚀</h1>
-
-    <div class="typing">
-        AIML Student | Future AI Engineer 🤖
-    </div>
-
-    <div class="buttons">
-        <a href="login.html" class="btn login-btn">
-            <i class="fas fa-sign-in-alt"></i> Enter Dashboard
-        </a>
-
-        <a href="https://www.instagram.com/kranthi777_king/" target="_blank" class="btn social-btn">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://in.linkedin.com/in/nakka-kranthi-69008737a" target="_blank" class="btn social-btn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </div>
-</div>
-
-<!-- Footer -->
-<div class="footer">
+<footer>
     © 2026 Kranthi | Built with ❤️
-</div>
+</footer>
 
 </body>
 </html>
